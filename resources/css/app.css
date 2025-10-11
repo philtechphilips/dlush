@@ -1,0 +1,77 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@font-face {
+    font-family: 'IBM Plex Sans';
+    src: url('/fonts/IBMPlexSans.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('/fonts/Merriweather.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Fallback fonts for debugging */
+* {
+    font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif !important;
+}
+
+
+@theme {
+    --color-primary: #5C0029;
+    --color-primary-100: #D9C6B0;
+    --color-white: #ffffff;
+    --color-gray-100: #262626;
+    --color-gray-200: #222222;
+    --color-gray-300: #FDFBF8;
+}
+
+@keyframes slow-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-slow-spin {
+    animation: slow-spin 10s linear infinite;
+}
+
+/* Testimonial animations */
+.testimonial-container h5 {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.testimonial-container p {
+    transform: translateY(0);
+    opacity: 1;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.testimonial-dot {
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonial-dot:hover {
+    transform: scale(1.1);
+}
+
