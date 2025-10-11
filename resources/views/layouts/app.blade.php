@@ -37,7 +37,7 @@
 
 <body class="">
     @include('layouts.navigation')
-    <div class="">
+    <div class="relative">
         <!-- Page Content -->
         <main>
             @yield('contents')
@@ -47,6 +47,51 @@
     @include('layouts.footer')
 
     @yield('scripts')
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const menuClose = document.getElementById('menu-close');
+            const mobileMenu = document.getElementById('mobile-menu');
+            let isMenuOpen = false;
+    
+            // Open menu - swipe in from right
+            menuToggle.addEventListener('click', function() {
+                if (!isMenuOpen) {
+                    mobileMenu.classList.remove('translate-x-full');
+                    mobileMenu.classList.add('translate-x-0');
+                    menuToggle.classList.add('hidden');
+                    menuClose.classList.remove('hidden');
+                    isMenuOpen = true;
+                }
+            });
+    
+            // Close menu - swipe out to right
+            menuClose.addEventListener('click', function() {
+                if (isMenuOpen) {
+                    mobileMenu.classList.remove('translate-x-0');
+                    mobileMenu.classList.add('translate-x-full');
+                    menuClose.classList.add('hidden');
+                    menuToggle.classList.remove('hidden');
+                    isMenuOpen = false;
+                }
+            });
+    
+            // Close menu when clicking on nav links
+            const navLinks = mobileMenu.querySelectorAll('a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    if (isMenuOpen) {
+                        mobileMenu.classList.remove('translate-x-0');
+                        mobileMenu.classList.add('translate-x-full');
+                        menuClose.classList.add('hidden');
+                        menuToggle.classList.remove('hidden');
+                        isMenuOpen = false;
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
