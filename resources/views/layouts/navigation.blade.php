@@ -1,16 +1,17 @@
-<div id="main-nav" class="2xl:px-25 md:px-10 px-5 py-4 flex items-center justify-between bg-white relative top-0 left-0 right-0 z-200 shadow transition-all duration-300"
+<div id="main-nav"
+    class="2xl:px-25 md:px-10 px-5 py-4 flex items-center justify-between bg-white relative top-0 left-0 right-0 z-200 shadow transition-all duration-300"
     style="box-shadow: 0px 2px 4px -1px #10192805, 0px 5px 13px -5px #1019280D;">
-
-    <img class="w-20" src="{{ asset('/images/dlush.svg') }}" alt="">
-
+    <a href="/">
+        <img class="w-20" src="{{ asset('/images/dlush.svg') }}" alt="">
+    </a>
     <ul class="hidden md:flex gap-10 items-center">
         <li>
-            <x-nav-link href="" :active="true">
+            <x-nav-link href="/" :active="true">
                 Home
             </x-nav-link>
         </li>
         <li>
-            <x-nav-link href="">
+            <x-nav-link href="/about">
                 About
             </x-nav-link>
         </li>
@@ -49,11 +50,14 @@
         </x-shadow-button>
     </div>
 
-    <img id="menu-toggle" class="cursor-pointer w-6 block md:hidden" src="{{ asset('/images/menu-right.svg') }}" alt="">
-    <img id="menu-close" class="cursor-pointer w-6 block md:hidden hidden" src="{{ asset('/images/close.svg') }}" alt="">
+    <img id="menu-toggle" class="cursor-pointer w-6 block md:hidden" src="{{ asset('/images/menu-right.svg') }}"
+        alt="">
+    <img id="menu-close" class="cursor-pointer w-6 block md:hidden hidden" src="{{ asset('/images/close.svg') }}"
+        alt="">
 </div>
 
-<div id="mobile-menu" class="w-full bg-white fixed top-[79px] h-screen z-100 py-12 px-20 md:hidden flex flex-col items-center transform translate-x-full transition-transform duration-300 ease-in-out">
+<div id="mobile-menu"
+    class="w-full bg-white fixed top-[79px] h-screen z-100 py-12 px-20 md:hidden flex flex-col items-center transform translate-x-full transition-transform duration-300 ease-in-out">
     <ul class="flex flex-col gap-10 items-center">
         <li>
             <x-nav-link href="" :active="true">
@@ -116,7 +120,7 @@
                 // Make nav fixed when mobile menu opens
                 mainNav.classList.remove('relative');
                 mainNav.classList.add('fixed');
-                
+
                 mobileMenu.classList.remove('translate-x-full');
                 mobileMenu.classList.add('translate-x-0');
                 menuToggle.classList.add('hidden');
@@ -132,13 +136,13 @@
                 mobileMenu.classList.add('translate-x-full');
                 menuClose.classList.add('hidden');
                 menuToggle.classList.remove('hidden');
-                
+
                 // Make nav relative again when mobile menu closes
                 setTimeout(() => {
                     mainNav.classList.remove('fixed');
                     mainNav.classList.add('relative');
                 }, 300); // Wait for animation to complete
-                
+
                 isMenuOpen = false;
             }
         });
@@ -152,17 +156,16 @@
                     mobileMenu.classList.add('translate-x-full');
                     menuClose.classList.add('hidden');
                     menuToggle.classList.remove('hidden');
-                    
+
                     // Make nav relative again when mobile menu closes
                     setTimeout(() => {
                         mainNav.classList.remove('fixed');
                         mainNav.classList.add('relative');
                     }, 300); // Wait for animation to complete
-                    
+
                     isMenuOpen = false;
                 }
             });
         });
     });
 </script>
-

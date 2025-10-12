@@ -75,3 +75,143 @@ h1, h2, h3, h4, h5, h6 {
     transform: scale(1.1);
 }
 
+/* Image Carousel Styles */
+.carousel-group {
+    transition: opacity 1s ease-in-out;
+    width: 100%;
+}
+
+.carousel-group.opacity-0 {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.carousel-group.opacity-100 {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Service Card Hover Animations */
+.service-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.service-card .service-content {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Default inactive state - black gradient */
+.service-card .service-content {
+    background: linear-gradient(0deg, #010001 0%, rgba(0, 0, 0, 0) 100%) !important;
+    transition: background 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Hide description and link by default - no space taken */
+.service-card .service-content .service-description {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(20px);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.service-card .service-content .service-link {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateY(20px);
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.service-card .service-content .service-link div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Active state - red gradient */
+.service-card.active .service-content {
+    background: linear-gradient(360deg, #5C0029 37.5%, rgba(0, 0, 0, 0) 100%) !important;
+}
+
+.service-card.active .service-content .service-description {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 1.5rem;
+}
+
+.service-card.active .service-content .service-link {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 50px;
+}
+
+.service-card.active .service-content .service-link div {
+    margin-top: 1.5rem;
+}
+
+.service-card.active .service-content .service-link {
+    margin-top: 1.5rem;
+}
+
+/* Mobile - All cards active */
+@media (max-width: 768px) {
+    .service-card .service-content {
+        background: linear-gradient(360deg, #5C0029 37.5%, rgba(0, 0, 0, 0) 100%) !important;
+    }
+    
+    .service-card .service-content .service-description {
+        transform: translateY(0);
+        opacity: 1;
+        max-height: 300px;
+        margin-top: 1.5rem;
+    }
+    
+    .service-card .service-content .service-link {
+        transform: translateY(0);
+        opacity: 1;
+        max-height: 50px;
+        margin-top: 1.5rem;
+    }
+    
+    .service-card .service-content .service-link div {
+        margin-top: 0 !important;
+    }
+}
+
+/* Hover state - red gradient */
+.service-card:hover .service-content {
+    background: linear-gradient(360deg, #5C0029 37.5%, rgba(0, 0, 0, 0) 100%) !important;
+}
+
+.service-card:hover .service-content .service-description {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 200px;
+    margin-top: 1.5rem;
+}
+
+.service-card:hover .service-content .service-link {
+    transform: translateY(0);
+    opacity: 1;
+    max-height: 50px;
+}
+
+.service-card:hover .service-content .service-link div {
+    margin-top: 1.5rem;
+}
+
+.service-card:hover .service-content .service-link {
+    margin-top: 1.5rem;
+}
+

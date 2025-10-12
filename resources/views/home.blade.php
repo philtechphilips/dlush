@@ -47,42 +47,7 @@
                 <img src="{{ asset('/images/quote.svg') }}" alt="Testimonial">
 
                 <!-- Testimonial Content -->
-                <div class="testimonial-container relative overflow-hidden">
-                    <h5 id="testimonial-text"
-                        class="font-bold text-lg text-primary mt-6 transition-all duration-1000 ease-in-out">We used their
-                        planning, decoration, and rentals for our
-                        anniversary, and I honestly don't know how we would have done it without them. Everything flowed
-                        seamlessly.</h5>
-
-                    <div class="flex items-end justify-between">
-                        <div class="testimonial-author">
-                            <p id="testimonial-name"
-                                class="text-base text-gray-100 font-semibold mt-6 transition-all duration-500 ease-in-out delay-100">
-                                Chinwe O</p>
-                            <p id="testimonial-location"
-                                class="text-sm text-gray-200 font-medium mt-1 transition-all duration-500 ease-in-out delay-200">
-                                Milton Keynes</p>
-                        </div>
-
-                        <div class="flex gap-2">
-                            <button
-                                class="testimonial-dot w-4 h-4 bg-primary rounded-full transition-all duration-300 ease-in-out"
-                                data-testimonial="0"></button>
-                            <button
-                                class="testimonial-dot w-4 h-4 bg-primary-100 rounded-full transition-all duration-300 ease-in-out"
-                                data-testimonial="1"></button>
-                            <button
-                                class="testimonial-dot w-4 h-4 bg-primary-100 rounded-full transition-all duration-300 ease-in-out"
-                                data-testimonial="2"></button>
-                            <button
-                                class="testimonial-dot w-4 h-4 bg-primary-100 rounded-full transition-all duration-300 ease-in-out"
-                                data-testimonial="3"></button>
-                            <button
-                                class="testimonial-dot w-4 h-4 bg-primary-100 rounded-full transition-all duration-300 ease-in-out"
-                                data-testimonial="4"></button>
-                        </div>
-                    </div>
-                </div>
+                <x-testimonial variant="desktop" />
             </div>
         </div>
     </section>
@@ -127,238 +92,247 @@
             <img src="{{ asset('/images/quote.svg') }}" alt="Testimonial">
 
             <!-- Testimonial Content -->
-            <div class="testimonial-container relative overflow-hidden">
-                <h5 id="mobile-testimonial-text"
-                    class="font-bold text-lg text-primary mt-6 transition-all duration-1000 ease-in-out">We used their
-                    planning, decoration, and rentals for our
-                    anniversary, and I honestly don't know how we would have done it without them. Everything flowed
-                    seamlessly.</h5>
+            <x-testimonial variant="mobile" />
+        </div>
+    </section>
 
-                <div class="flex items-end justify-between">
-                    <div class="testimonial-author">
-                        <p id="mobile-testimonial-name"
-                            class="text-base text-gray-100 font-semibold mt-6 transition-all duration-500 ease-in-out delay-100">
-                            Chinwe O</p>
-                        <p id="mobile-testimonial-location"
-                            class="text-sm text-gray-200 font-medium mt-1 transition-all duration-500 ease-in-out delay-200">
-                            Milton Keynes</p>
+
+    <section class="w-full bg-white md:p-25 px-4 flex md:flex-row flex-col-reverse md:gap-16 gap-12 items-center">
+
+        <div class="md:w-1/2 w-full">
+            <div class="flex items-end gap-2 mt-6 w-full">
+                <div class="w-13 h-0.5 bg-primary"></div>
+                <p class="!font-medium text-gray-200 text-sm">About Us</p>
+            </div>
+            <h2 class="mt-4 text-gray-200 font-bold md:text-5xl text-3xl pr-20 md:leading-14">Your Partner for Elegant,
+                Effortless
+                Events</h2>
+            <p class="font-normal text-lg text-gray-200 mt-4">
+                Behind every event we design is a genuine passion for detail, creativity, and care. We believe that every
+                celebration should be unique, stress-free, and filled with unforgettable moments.
+            </p>
+            <p class="font-normal text-lg text-gray-200 mt-4">
+                With years of experience, we’ve transformed ordinary spaces into extraordinary memories, tailoring each
+                event to reflect the personality and vision of our clients. Based in the UK, we are committed to delivering
+                events with professionalism, reliability, and an elegant touch that makes every occasion truly special.
+            </p>
+            <div class="mt-12">
+                <a href="" class="text-primary font-semibold text-base">Learn More <i
+                        class="ri-arrow-right-up-line"></i></a>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 md:h-[530px] h-[454px] rounded-tl-[100px] rounded-br-[100px] relative mt-30 md:mt-0">
+            <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                src="{{ asset('/images/home-about.webp') }}" alt="">
+            <x-stats-cards variant="desktop" />
+            <x-stats-cards variant="mobile" />
+        </div>
+
+    </section>
+
+    <section class="w-full bg-white md:p-25 py-16 px-4  flex flex-col items-center">
+        <p class="font-medium text-gray-200 text-center text-sm">Our Services</p>
+        <h2 class="mt-4 text-gray-200 font-bold text-center md:text-5xl text-3xl md:w-162">Tailored for Every Occasion</h2>
+        <p class="font-normal text-lg text-gray-200 mt-4 text-center md:w-170">Whether it’s a small gathering or a large
+            celebration, we provide reliable solutions that take the stress off your shoulders and add elegance to your
+            event.</p>
+
+        <div class="grid md:grid-cols-2 grid-cols-1 gap-12 w-full mt-16">
+            <!-- First card - Active by default -->
+            <div
+                class="service-card  rounded-tl-[100px] rounded-br-[100px] 2xl:h-[700px] h-[500px] w-full overflow-hidden relative">
+                <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                    src="{{ asset('/images/planning.webp') }}" alt="">
+
+                <div
+                    class="service-content absolute bottom-0 left-0 right-0 2xl:pr-40 2xl:pl-10 md:pr-10 md:pl-10 pl-6 pr-6 py-12">
+                    <h4 class="font-bold 2xl:text-[28px] text-2xl text-white">Event Planning & Coordination</h4>
+                    <p class="service-description 2xl:text-lg text-base font-normal text-primary-100">From start to finish,
+                        we manage
+                        timelines, vendors, and every detail to make your day stress-free</p>
+                    <div class="service-link">
+                        <a href="" class="text-primary-100 font-medium text-sm">Learn More <i
+                                class="ri-arrow-right-up-line"></i></a>
                     </div>
+                </div>
+            </div>
 
-                    <div class="flex gap-2">
-                        <button
-                            class="mobile-testimonial-dot w-2 h-2 bg-primary rounded-full transition-all duration-300 ease-in-out"
-                            data-testimonial="0"></button>
-                        <button
-                            class="mobile-testimonial-dot w-2 h-2 bg-primary-100 rounded-full transition-all duration-300 ease-in-out"
-                            data-testimonial="1"></button>
-                        <button
-                            class="mobile-testimonial-dot w-2 h-2 bg-primary-100 rounded-full transition-all duration-300 ease-in-out"
-                            data-testimonial="2"></button>
-                        <button
-                            class="mobile-testimonial-dot w-2 h-2 bg-primary-100 rounded-full transition-all duration-300 ease-in-out"
-                            data-testimonial="3"></button>
-                        <button
-                            class="mobile-testimonial-dot w-2 h-2 bg-primary-100 rounded-full transition-all duration-300 ease-in-out"
-                            data-testimonial="4"></button>
+            <!-- Second card - Inactive by default -->
+            <div
+                class="service-card rounded-tl-[100px] rounded-br-[100px] 2xl:h-[700px] h-[500px] w-full overflow-hidden relative">
+                <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                    src="{{ asset('/images/venue.webp') }}" alt="">
+                <div
+                    class="service-content absolute bottom-0 left-0 right-0 2xl:pr-40 2xl:pl-10 md:pr-10 md:pl-10 pl-6 pr-6 py-12">
+                    <h4 class="font-bold 2xl:text-[28px] text-2xl text-white">Venue Decoration</h4>
+                    <p class="service-description 2xl:text-lg text-base font-normal text-primary-100">Themes, Floral
+                        arrangements, backdrops, lighting, and elegant table setups tailored to your occasion.</p>
+                    <div class="service-link mt-6">
+                        <a href="" class="text-primary-100 font-medium text-sm">Learn More <i
+                                class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Third card - Inactive by default -->
+            <div
+                class="service-card rounded-tl-[100px] rounded-br-[100px] 2xl:h-[700px] h-[500px] w-full overflow-hidden relative">
+                <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                    src="{{ asset('/images/rental.webp') }}" alt="">
+
+                <div
+                    class="service-content absolute bottom-0 left-0 right-0 2xl:pr-40 2xl:pl-10 md:pr-10 md:pl-10 pl-6 pr-6 py-12">
+                    <h4 class="font-bold 2xl:text-[28px] text-2xl text-white">Rental Services</h4>
+                    <p class="service-description 2xl:text-lg text-base font-normal text-primary-100">Chairs, tables,
+                        linens, backdrops, dance floors, catering equipment, props and more, everything you need for a
+                        successful event.</p>
+                    <div class="service-link">
+                        <a href="" class="text-primary-100 font-medium text-sm">Learn More <i
+                                class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div
+                class="rounded-tl-[100px] rounded-br-[100px] 2xl:h-[700px] h-[500px] w-full overflow-hidden relative flex items-center p-16 border-2 border-primary">
+                <h5 class="text-primary font-bold text-lg ">“ Every event is unique. We provide custom quotes tailored to
+                    your needs, with rates starting from £250. ”</h5>
+                <div class="absolute bottom-16 left-16">
+                    <x-shadow-button href="">
+                        Plan Your Event
+                    </x-shadow-button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="w-full bg-primary-100 md:p-25 py-16 px-4 mt-25 flex flex-col items-center">
+        <p class="font-semibold text-gray-200 text-center">Moments That Speak for Themselves</p>
+        <h2 class="mt-4 text-gray-200 font-bold text-center md:text-5xl text-3xl md:w-162">A Glimpse Into What We Create
+        </h2>
+
+        <!-- Image Carousel Container -->
+        <div class="relative mt-16 overflow-hidden w-full">
+            <div id="imageCarousel" class="relative w-full">
+                <!-- Group 1: Images 1-3 -->
+                <div class="carousel-group opacity-100" data-group="0">
+                    <div class="grid md:grid-cols-3 grid-cols-1 gap-6 2xl:gap-4 w-full">
+                        <div class="rounded-tl-[100px] rounded-br-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                                src="{{ asset('/images/glimpse-1.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-2.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-3.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 2: Images 4-6 -->
+                <div class="carousel-group opacity-0 absolute inset-0" data-group="1">
+                    <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+                        <div class="rounded-tl-[100px] rounded-br-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                                src="{{ asset('/images/glimpse-4.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-5.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-6.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 3: Images 7-9 -->
+                <div class="carousel-group opacity-0 absolute inset-0" data-group="2">
+                    <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+                        <div class="rounded-tl-[100px] rounded-br-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                                src="{{ asset('/images/glimpse-7.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-8.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-9.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 4: Images 10-12 -->
+                <div class="carousel-group opacity-0 absolute inset-0" data-group="3">
+                    <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+                        <div class="rounded-tl-[100px] rounded-br-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                                src="{{ asset('/images/glimpse-10.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-11.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-12.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 5: Images 13-15 -->
+                <div class="carousel-group opacity-0 absolute inset-0" data-group="4">
+                    <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+                        <div class="rounded-tl-[100px] rounded-br-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                                src="{{ asset('/images/glimpse-13.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-14.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-15.jpg') }}" alt="">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Group 6: Images 16-18 -->
+                <div class="carousel-group opacity-0 absolute inset-0" data-group="5">
+                    <div class="grid md:grid-cols-3 grid-cols-1 gap-6">
+                        <div class="rounded-tl-[100px] rounded-br-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tl-[100px] rounded-br-[100px]"
+                                src="{{ asset('/images/glimpse-16.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-17.jpg') }}" alt="">
+                        </div>
+                        <div class="rounded-tr-[100px] rounded-bl-[100px] 2xl:h-[498px] h-[400px] w-full overflow-hidden">
+                            <img class="w-full h-full object-cover rounded-tr-[100px] rounded-bl-[100px]"
+                                src="{{ asset('/images/glimpse-18.jpg') }}" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <h4 class="text-center text-gray-100 md:w-153 text-3xl font-bold mt-16">“Every image tells a story of care,
+            elegance, and unforgettable detail, let us craft the next one with you.”</h4>
     </section>
 @endsection
 
 
 
 @section('scripts')
-    <script>
-        // Testimonial data
-        const testimonials = [{
-                text: "We used their planning, decoration, and rentals for our anniversary, and I honestly don’t know how we would have done it without them. Everything flowed seamlessly.",
-                name: "Chinwe O.",
-                location: "Milton Keynes"
-            },
-            {
-                text: "From the first meeting, I felt completely at ease. Every detail was handled, and I was able to simply enjoy my event without stress. Professional, friendly, and reliable.",
-                name: "Sarah L.",
-                location: "London"
-            },
-            {
-                text: "The transformation was breathtaking. I walked into the hall and couldn’t believe it was the same space. The décor was elegant yet warm — exactly what I imagined.",
-                name: "James & Aisha",
-                location: "Birmingham"
-            },
-            {
-                text: "We hired tables, chairs, and décor items, and everything arrived on time in excellent condition. The setup team was efficient, and it really pulled the whole event together.",
-                name: "Mark T.",
-                location: "Manchester"
-            },
-            {
-                text: "What impressed me most was the personal touch. They really listened and delivered something that reflected us. It wasn’t just an event; it was a memory we’ll cherish.",
-                name: "Emily R",
-                location: "Kent"
-            }
-        ];
 
-        let currentTestimonial = 0;
-
-        // Get DOM elements (both desktop and mobile)
-        const testimonialText = document.getElementById('testimonial-text');
-        const testimonialName = document.getElementById('testimonial-name');
-        const testimonialLocation = document.getElementById('testimonial-location');
-        const dots = document.querySelectorAll('.testimonial-dot');
-
-        // Mobile elements
-        const mobileTestimonialText = document.getElementById('mobile-testimonial-text');
-        const mobileTestimonialName = document.getElementById('mobile-testimonial-name');
-        const mobileTestimonialLocation = document.getElementById('mobile-testimonial-location');
-        const mobileDots = document.querySelectorAll('.mobile-testimonial-dot');
-
-        // Function to update testimonial
-        function updateTestimonial(index) {
-            // Update content first (before any animation) - Desktop
-            if (testimonialText) {
-                testimonialText.textContent = testimonials[index].text;
-                testimonialName.textContent = testimonials[index].name;
-                testimonialLocation.textContent = testimonials[index].location;
-            }
-
-            // Update content first (before any animation) - Mobile
-            if (mobileTestimonialText) {
-                mobileTestimonialText.textContent = testimonials[index].text;
-                mobileTestimonialName.textContent = testimonials[index].name;
-                mobileTestimonialLocation.textContent = testimonials[index].location;
-            }
-
-            // Update dots - Desktop
-            dots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.remove('bg-primary-100');
-                    dot.classList.add('bg-primary');
-                } else {
-                    dot.classList.remove('bg-primary');
-                    dot.classList.add('bg-primary-100');
-                }
-            });
-
-            // Update dots - Mobile
-            mobileDots.forEach((dot, i) => {
-                if (i === index) {
-                    dot.classList.remove('bg-primary-100');
-                    dot.classList.add('bg-primary');
-                } else {
-                    dot.classList.remove('bg-primary');
-                    dot.classList.add('bg-primary-100');
-                }
-            });
-
-            // Update desktop testimonials
-            if (testimonialText) {
-                // Remove transitions temporarily
-                testimonialText.style.transition = 'none';
-                testimonialName.style.transition = 'none';
-                testimonialLocation.style.transition = 'none';
-
-                // Set new text to start from right (off-screen) while current is still visible
-                testimonialText.style.transform = 'translateX(100vw)';
-                testimonialName.style.transform = 'translateY(50px)';
-                testimonialName.style.opacity = '0';
-                testimonialLocation.style.transform = 'translateY(50px)';
-                testimonialLocation.style.opacity = '0';
-
-                // Force a reflow
-                testimonialText.offsetHeight;
-
-                // Add transitions back
-                testimonialText.style.transition = 'transform 0.5s ease-in-out';
-                testimonialName.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
-                testimonialLocation.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
-
-                // Simultaneously: current text swipes out left, new text swipes in from right
-                setTimeout(() => {
-                    testimonialText.style.transform = 'translateX(-100vw)';
-                }, 10);
-
-                setTimeout(() => {
-                    testimonialText.style.transform = 'translateX(0)';
-                }, 20);
-
-                setTimeout(() => {
-                    testimonialName.style.transform = 'translateY(0)';
-                    testimonialName.style.opacity = '1';
-                }, 200);
-
-                setTimeout(() => {
-                    testimonialLocation.style.transform = 'translateY(0)';
-                    testimonialLocation.style.opacity = '1';
-                }, 300);
-            }
-
-            // Update mobile testimonials
-            if (mobileTestimonialText) {
-                // Remove transitions temporarily
-                mobileTestimonialText.style.transition = 'none';
-                mobileTestimonialName.style.transition = 'none';
-                mobileTestimonialLocation.style.transition = 'none';
-
-                // Set new text to start from right (off-screen) while current is still visible
-                mobileTestimonialText.style.transform = 'translateX(100vw)';
-                mobileTestimonialName.style.transform = 'translateY(50px)';
-                mobileTestimonialName.style.opacity = '0';
-                mobileTestimonialLocation.style.transform = 'translateY(50px)';
-                mobileTestimonialLocation.style.opacity = '0';
-
-                // Force a reflow
-                mobileTestimonialText.offsetHeight;
-
-                // Add transitions back
-                mobileTestimonialText.style.transition = 'transform 0.5s ease-in-out';
-                mobileTestimonialName.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
-                mobileTestimonialLocation.style.transition = 'transform 0.5s ease-in-out, opacity 0.5s ease-in-out';
-
-                // Simultaneously: current text swipes out left, new text swipes in from right
-                setTimeout(() => {
-                    mobileTestimonialText.style.transform = 'translateX(-100vw)';
-                }, 10);
-
-                setTimeout(() => {
-                    mobileTestimonialText.style.transform = 'translateX(0)';
-                }, 20);
-
-                setTimeout(() => {
-                    mobileTestimonialName.style.transform = 'translateY(0)';
-                    mobileTestimonialName.style.opacity = '1';
-                }, 200);
-
-                setTimeout(() => {
-                    mobileTestimonialLocation.style.transform = 'translateY(0)';
-                    mobileTestimonialLocation.style.opacity = '1';
-                }, 300);
-            }
-        }
-
-        // Add click event listeners to dots - Desktop
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentTestimonial = index;
-                updateTestimonial(currentTestimonial);
-            });
-        });
-
-        // Add click event listeners to dots - Mobile
-        mobileDots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                currentTestimonial = index;
-                updateTestimonial(currentTestimonial);
-            });
-        });
-
-        // Auto-rotate testimonials every 5 seconds
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-            updateTestimonial(currentTestimonial);
-        }, 5000);
-
-        // Initialize with first testimonial
-        updateTestimonial(0);
-    </script>
 @endsection
