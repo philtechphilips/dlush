@@ -15,7 +15,7 @@
                 with detail, creativity, and personal care.</p>
 
             <div class="relative mt-12 mb-4">
-                <x-shadow-button href="">
+                <x-shadow-button href="/contact-us">
                     Plan Your Event
                 </x-shadow-button>
             </div>
@@ -84,7 +84,7 @@
 
 
             <div class="relative mt-12 flex w-full justify-center">
-                <x-shadow-button href="">
+                <x-shadow-button href="/contact-us">
                     Plan Your Event
                 </x-shadow-button>
             </div>

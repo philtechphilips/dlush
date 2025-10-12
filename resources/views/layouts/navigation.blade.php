@@ -60,17 +60,17 @@
     class="w-full bg-white fixed top-[79px] h-screen z-100 py-12 px-20 md:hidden flex flex-col items-center transform translate-x-full transition-transform duration-300 ease-in-out">
     <ul class="flex flex-col gap-10 items-center">
         <li>
-            <x-nav-link href="" :active="true">
+            <x-nav-link href="/" :active="true">
                 Home
             </x-nav-link>
         </li>
         <li>
-            <x-nav-link href="">
+            <x-nav-link href="/about">
                 About
             </x-nav-link>
         </li>
         <li class="relative group">
-            <x-nav-link href="">
+            <x-nav-link href="javascript:void(0)">
                 Services
             </x-nav-link>
         </li>
@@ -78,15 +78,15 @@
             <div class="-mt-6">
                 <ul class="flex flex-col items-center gap-4 w-full font-medium">
                     <li>
-                        <a href="" class="text-gray-200 hover:text-primary font-medium text-sm">Event Planning &
+                        <a href="/event-planning" class="text-gray-200 hover:text-primary font-medium text-sm">Event Planning &
                             Coordination <i class="ri-arrow-right-up-line"></i></a>
                     </li>
                     <li>
-                        <a href="" class="text-gray-200 hover:text-primary font-medium text-sm">Venue Decoration
+                        <a href="/venue-decoration" class="text-gray-200 hover:text-primary font-medium text-sm">Venue Decoration
                             <i class="ri-arrow-right-up-line"></i></a>
                     </li>
                     <li>
-                        <a href="" class="text-gray-200 hover:text-primary font-medium text-sm">Rentals Services
+                        <a href="/rental-services" class="text-gray-200 hover:text-primary font-medium text-sm">Rentals Services
                             <i class="ri-arrow-right-up-line"></i></a>
                     </li>
                 </ul>

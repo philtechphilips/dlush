@@ -8,6 +8,6 @@
 
 <section class="w-full flex items-center justify-center py-16">
     <div class="{{ $width }}">
-        <p class="{{ $fontWeight }} text-center {{ $textSize }} {{ $textColor }}">{{ $text }}</p>
+        <h5 class="{{ $fontWeight }} text-center {{ $textSize }} {{ $textColor }}">{{ $text }}</h5>
     </div>
 </section>

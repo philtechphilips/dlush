@@ -1,5 +1,5 @@
 @props([
-    'href' => '#',
+    'href' => '/contact-us',
     'variant' => 'primary',
     'size' => 'md',
     'class' => ''
@@ -11,7 +11,7 @@
     $variantClasses = [
         'primary' => 'bg-primary text-primary-100',
     ];
-    
+
     $hoverBorderClasses = 'hover:border-0 hover:border-r-4 hover:border-b-5 hover:border-l-0 hover:border-t-0 hover:border-solid hover:border-[#0A0005]';
 
     $sizeClasses = [

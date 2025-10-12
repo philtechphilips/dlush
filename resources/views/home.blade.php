@@ -15,7 +15,7 @@
                 beautiful décor, and trusted event services.</p>
 
             <div class="relative mt-12">
-                <x-shadow-button href="">
+                <x-shadow-button href="/contact-us">
                     Plan Your Event
                 </x-shadow-button>
             </div>
@@ -69,7 +69,7 @@
                 <p class="mt-6 text-gray-200 text-lg font-normal ">We bring your vision to life with flawless planning,
                     beautiful décor, and trusted event services.</p>
                 <div class="relative mt-12 mb-4">
-                    <x-shadow-button href="">
+                    <x-shadow-button href="/contact-us">
                         Plan Your Event
                     </x-shadow-button>
                 </div>
@@ -199,7 +199,7 @@
                 <h5 class="text-primary font-bold text-lg ">“ Every event is unique. We provide custom quotes tailored to
                     your needs, with rates starting from £250. ”</h5>
                 <div class="absolute bottom-16 left-16">
-                    <x-shadow-button href="">
+                    <x-shadow-button href="/contact-us">
                         Plan Your Event
                     </x-shadow-button>
                 </div>
@@ -328,6 +328,12 @@
 
         <h4 class="text-center text-gray-100 md:w-153 text-3xl font-bold mt-16">“Every image tells a story of care,
             elegance, and unforgettable detail, let us craft the next one with you.”</h4>
+
+              <div class="relative mt-20 mb-4">
+                    <x-shadow-button href="/contact-us">
+                        Plan Your Event
+                    </x-shadow-button>
+                </div>
     </section>
 @endsection
 

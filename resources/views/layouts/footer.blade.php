@@ -3,37 +3,43 @@
 
     <ul class="flex w-full flex-wrap md:gap-10 gap-6 items-center justify-center px-5">
         <li>
-            <x-nav-link href="" :active="true">
+            <x-nav-link href="/" :active="true">
                 Home
             </x-nav-link>
         </li>
         <li>
-            <x-nav-link href="">
+            <x-nav-link href="/about">
                 About
             </x-nav-link>
         </li>
         <li class="relative group">
-            <x-nav-link href="">
+            <x-nav-link href="/event-planning">
                 Services
             </x-nav-link>
         </li>
         <li>
-            <x-nav-link href="">
+            <x-nav-link href="/faqs">
                 FAQs
             </x-nav-link>
         </li>
 
         <li>
-            <x-nav-link href="">
+            <x-nav-link href="/contact-us">
                 Contact
             </x-nav-link>
         </li>
     </ul>
 
     <div class="flex gap-4">
-        <img src="{{asset("/images/facebook.svg")}}" alt="">
-        <img src="{{asset("/images/instagram.svg")}}" alt="">
-        <img src="{{asset("/images/pinterest.svg")}}" alt="">
+        <a href="https://www.facebook.com/dlushevents" target="_blank">
+            <img src="{{asset("/images/facebook.svg")}}" alt="">
+        </a>
+        <a href="https://www.instagram.com/dlushevents" target="_blank">
+            <img src="{{asset("/images/instagram.svg")}}" alt="">
+        </a>
+        <a href="https://www.pinterest.com/dlushevents" target="_blank">
+            <img src="{{asset("/images/pinterest.svg")}}" alt="">
+        </a>
     </div>
 
     <div class="w-full flex md:flex-row flex-col items-center gap-2 md:justify-between">

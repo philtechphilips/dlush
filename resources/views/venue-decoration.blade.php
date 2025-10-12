@@ -52,7 +52,7 @@
     />
 
       <div class="w-full flex items-center justify-center mb-24">
-        <x-shadow-button href="">
+        <x-shadow-button href="/contact-us">
             Start Planning
         </x-shadow-button>
     </div>

@@ -39,4 +39,5 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif !important;
+    line-height: 120% !important;
 }

@@ -52,12 +52,12 @@
     />
 
       <div class="w-full flex items-center justify-center mb-24">
-        <x-shadow-button href="">
+        <x-shadow-button href="/contact-us">
             Start Planning
         </x-shadow-button>
     </div>
 
-    
+
     <section class="w-full bg-primary-100 py-16 2xl:px-25 md:px-10 px-5">
         <div class="relative bg-transparent overflow-hidden">
             <div class="perspective-carousel">

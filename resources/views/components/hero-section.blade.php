@@ -9,7 +9,7 @@
 
 <section class="md:flex flex-col items-center w-full relative py-16" style="background: url('{{ asset($backgroundImage) }}')">
     <!-- Black overlay with configurable opacity -->
-    <div class="absolute inset-0 bg-black/{{ $overlayOpacity }}"></div>
+    <div class="absolute inset-0 bg-black/50"></div>
 
     <div class="relative z-10 {{ $width }}">
         <p class="mt-20 text-white text-center px-5">{{ $subtitle }}</p>
