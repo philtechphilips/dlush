@@ -5,31 +5,6 @@
 @source '../**/*.blade.php';
 @source '../**/*.js';
 
-@font-face {
-    font-family: 'IBM Plex Sans';
-    src: url('/fonts/IBMPlexSans.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Merriweather';
-    src: url('/fonts/Merriweather.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-/* Fallback fonts for debugging */
-* {
-    font-family: 'IBM Plex Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
-    box-sizing: border-box;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Merriweather', Georgia, 'Times New Roman', Times, serif !important;
-}
 
 
 @theme {
@@ -164,30 +139,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
 }
 
-/* Mobile - All cards active */
-@media (max-width: 768px) {
-    .service-card .service-content {
-        background: linear-gradient(360deg, #5C0029 37.5%, rgba(0, 0, 0, 0) 100%) !important;
-    }
-    
-    .service-card .service-content .service-description {
-        transform: translateY(0);
-        opacity: 1;
-        max-height: 300px;
-        margin-top: 1.5rem;
-    }
-    
-    .service-card .service-content .service-link {
-        transform: translateY(0);
-        opacity: 1;
-        max-height: 50px;
-        margin-top: 1.5rem;
-    }
-    
-    .service-card .service-content .service-link div {
-        margin-top: 0 !important;
-    }
-}
 
 /* Hover state - red gradient */
 .service-card:hover .service-content {
@@ -215,3 +166,263 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 1.5rem;
 }
 
+.perspective-carousel::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    height: 95px;
+    background:  #D9C6B0;
+    border-radius: 0 0 50% 50%;
+    z-index: 1;
+}
+
+.perspective-carousel::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    height: 95px;
+    background:  #D9C6B0;
+    border-radius: 50% 50% 0 0;
+    z-index: 1;
+}
+
+
+/* Infinite scroll animation */
+@keyframes infinite-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Alternative seamless scroll animation */
+@keyframes seamless-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* New seamless infinite scroll */
+@keyframes infinite-scroll-seamless {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Ultra-smooth seamless scroll */
+@keyframes ultra-seamless-scroll {
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-50%, 0, 0);
+    }
+}
+
+/* Perfect seamless infinite scroll */
+@keyframes perfect-infinite-scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Ultra-seamless scroll with different approach */
+@keyframes ultra-seamless-scroll-v2 {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Final seamless scroll attempt */
+@keyframes final-seamless-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Carousel track styles */
+.carousel-track {
+    display: flex;
+    gap: 4rem;
+    will-change: transform;
+    width: 200%; /* Double width to accommodate duplicated content */
+    backface-visibility: hidden;
+    perspective: 1000px;
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    will-change: transform;
+    transition: transform 0.3s ease;
+}
+
+/* Perspective carousel container */
+.perspective-carousel {
+    position: relative;
+    overflow: hidden;
+    height: 280px;
+    display: flex;
+    align-items: center;
+}
+
+/* Enhanced hover effects */
+.carousel-item:hover {
+    z-index: 10;
+}
+
+/* Loading state */
+.perspective-carousel.loading {
+    opacity: 0.7;
+}
+
+.perspective-carousel.loaded {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .perspective-carousel {
+        height: 180px;
+    }
+
+    .carousel-item {
+        width: 180px !important;
+        height: 180px !important;
+    }
+
+    .carousel-track {
+        gap: 2rem;
+    }
+}
+
+/* Pause animation on hover */
+.perspective-carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+/* Enhanced hover effects for carousel items */
+.carousel-item:hover {
+    transform: scale(1.05);
+    z-index: 10;
+}
+
+/* Accordion Styles */
+.accordion-item {
+    transition: all 0.3s ease;
+}
+
+.accordion-content {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.accordion-icon {
+    transition: all 0.3s ease;
+}
+
+
+
+/* Mobile - All cards active */
+@media (max-width: 768px) {
+    .service-card .service-content {
+        background: linear-gradient(360deg, #5C0029 37.5%, rgba(0, 0, 0, 0) 100%) !important;
+    }
+
+    .service-card .service-content .service-description {
+        transform: translateY(0);
+        opacity: 1;
+        max-height: 300px;
+        margin-top: 1.5rem;
+    }
+
+    .service-card .service-content .service-link {
+        transform: translateY(0);
+        opacity: 1;
+        max-height: 50px;
+        margin-top: 1.5rem;
+    }
+
+    .service-card .service-content .service-link div {
+        margin-top: 0 !important;
+    }
+
+    .perspective-carousel::before {
+        content: '';
+        position: absolute;
+        top: -50px;
+        left: 0;
+        right: 0;
+        height: 0px;
+        background:  #D9C6B0;
+        border-radius: 0 0 0% 0%;
+        z-index: 1;
+    }
+
+    .perspective-carousel::after {
+        content: '';
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        height: 0px;
+        background:  #D9C6B0;
+        border-radius: 0% 0% 0 0;
+        z-index: 1;
+    }
+}
+
+/* FAQ Accordion Animations */
+.accordion-icon {
+    transition: transform 0.5s ease-out !important;
+}
+
+.accordion-content {
+    transition: all 0.6s ease-out !important;
+    max-height: 0 !important;
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+    overflow: hidden;
+}
+
+.accordion-content p {
+    opacity: 0 !important;
+    transform: translateY(-8px) !important;
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out !important;
+    transition-delay: 0.1s !important;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 500px !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.accordion-item.active .accordion-content p {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition-delay: 0.2s !important;
+}

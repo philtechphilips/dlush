@@ -143,7 +143,7 @@
         });
     </script>
 
-        <script>
+    <script>
         // Testimonial data
         const testimonials = [{
                 text: "We used their planning, decoration, and rentals for our anniversary, and I honestly don’t know how we would have done it without them. Everything flowed seamlessly.",
@@ -333,6 +333,10 @@
 
         // Initialize with first testimonial
         updateTestimonial(0);
+    </script>
+    
+    <script>
+        
     </script>
 </body>
 

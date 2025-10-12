@@ -16,36 +16,36 @@
             </x-nav-link>
         </li>
         <li class="relative group">
-            <x-nav-link href="">
+            <x-nav-link href="javascript:void(0)">
                 Services
             </x-nav-link>
             <div
                 class="absolute top-12 -left-4 bg-gray-300 p-4 rounded-2xl w-70 z-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
                 <ul class="flex flex-col gap-4 w-full font-medium">
                     <li>
-                        <a href="" class="text-gray-200 hover:text-primary font-medium text-sm">Event Planning &
+                        <a href="/event-planning" class="text-gray-200 hover:text-primary font-medium text-sm">Event Planning &
                             Coordination <i class="ri-arrow-right-up-line"></i></a>
                     </li>
                     <li>
-                        <a href="" class="text-gray-200 hover:text-primary font-medium text-sm">Venue Decoration
+                        <a href="/venue-decoration" class="text-gray-200 hover:text-primary font-medium text-sm">Venue Decoration
                             <i class="ri-arrow-right-up-line"></i></a>
                     </li>
                     <li>
-                        <a href="" class="text-gray-200 hover:text-primary font-medium text-sm">Rentals Services
+                        <a href="/rental-services" class="text-gray-200 hover:text-primary font-medium text-sm">Rentals Services
                             <i class="ri-arrow-right-up-line"></i></a>
                     </li>
                 </ul>
             </div>
         </li>
         <li>
-            <x-nav-link href="">
+            <x-nav-link href="/faqs">
                 FAQs
             </x-nav-link>
         </li>
     </ul>
 
     <div class="hidden md:block relative">
-        <x-shadow-button href="">
+        <x-shadow-button href="/contact-us">
             Contact Us
         </x-shadow-button>
     </div>
@@ -93,14 +93,14 @@
             </div>
         </li>
         <li>
-            <x-nav-link href="">
+            <x-nav-link href="/faqs">
                 FAQs
             </x-nav-link>
         </li>
     </ul>
 
     <div class="mt-16">
-        <x-shadow-button href="">
+        <x-shadow-button href="/contact-us">
             Contact Us
         </x-shadow-button>
     </div>

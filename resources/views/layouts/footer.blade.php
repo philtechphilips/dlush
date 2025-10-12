@@ -40,7 +40,7 @@
         <p class="text-gray-200 text-sm font-normal text-center">Copyright © {{ date('Y') }} D'lush Events. All Rights Reserved</p>
 
       <div class="w-full md:w-fit flex justify-center">
-          <a href="" class="text-gray-200 text-sm font-normal text-center w-fit">Terms & Condition</a>
+          <a href="/terms-and-condition" class="text-gray-200 text-sm font-normal text-center w-fit">Terms & Condition</a>
       </div>
     </div>
 </footer>
