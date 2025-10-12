@@ -117,8 +117,8 @@
                 events with professionalism, reliability, and an elegant touch that makes every occasion truly special.
             </p>
             <div class="mt-12">
-                <a href="" class="text-primary font-semibold text-base">Learn More <i
-                        class="ri-arrow-right-up-line"></i></a>
+                <a href="/about" class="text-primary font-semibold text-base group"> <span class="group-hover:translate-y-1 transition-all duration-500 ease-in inline-block">Learn More</span> <i
+                        class="ri-arrow-right-up-line group-hover:-translate-y-1 transition-all duration-300 ease-in-out"></i></a>
             </div>
         </div>
 
@@ -152,8 +152,8 @@
                         we manage
                         timelines, vendors, and every detail to make your day stress-free</p>
                     <div class="service-link">
-                        <a href="" class="text-primary-100 font-medium text-sm">Learn More <i
-                                class="ri-arrow-right-up-line"></i></a>
+                        <a href="/event-planning" class="text-primary-100 font-medium text-sm group"> <span class="group-hover:translate-y-1 transition-all duration-500 ease-in inline-block">Learn More</span> <i
+                                class="ri-arrow-right-up-line group-hover:translate-y-1 transition-all duration-300 ease-in-out"></i></a>
                     </div>
                 </div>
             </div>
@@ -169,8 +169,8 @@
                     <p class="service-description 2xl:text-lg text-base font-normal text-primary-100">Themes, Floral
                         arrangements, backdrops, lighting, and elegant table setups tailored to your occasion.</p>
                     <div class="service-link mt-6">
-                        <a href="" class="text-primary-100 font-medium text-sm">Learn More <i
-                                class="ri-arrow-right-up-line"></i></a>
+                        <a href="/venue-decoration" class="text-primary-100 font-medium text-sm group"> <span class="group-hover:translate-y-1 transition-all duration-500 ease-in inline-block">Learn More</span> <i
+                                class="ri-arrow-right-up-line group-hover:translate-y-1 transition-all duration-300 ease-in-out"></i></a>
                     </div>
                 </div>
             </div>
@@ -188,8 +188,8 @@
                         linens, backdrops, dance floors, catering equipment, props and more, everything you need for a
                         successful event.</p>
                     <div class="service-link">
-                        <a href="" class="text-primary-100 font-medium text-sm">Learn More <i
-                                class="ri-arrow-right-up-line"></i></a>
+                        <a href="/rental-services" class="text-primary-100 font-medium text-sm group"> <span class="group-hover:translate-y-1 transition-all duration-500 ease-in inline-block">Learn More</span> <i
+                                class="ri-arrow-right-up-line group-hover:translate-y-1 transition-all duration-300 ease-in-out"></i></a>
                     </div>
                 </div>
             </div>

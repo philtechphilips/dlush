@@ -6,17 +6,17 @@
     </a>
     <ul class="hidden md:flex gap-10 items-center">
         <li>
-            <x-nav-link href="/" :active="true">
+            <x-nav-link href="/" :active="request()->is('/')">
                 Home
             </x-nav-link>
         </li>
         <li>
-            <x-nav-link href="/about">
+            <x-nav-link href="/about" :active="request()->is('about')">
                 About
             </x-nav-link>
         </li>
         <li class="relative group">
-            <x-nav-link href="javascript:void(0)">
+            <x-nav-link href="javascript:void(0)" :active="request()->is('event-planning') || request()->is('venue-decoration') || request()->is('rental-services')">
                 Services
             </x-nav-link>
             <div
@@ -38,7 +38,7 @@
             </div>
         </li>
         <li>
-            <x-nav-link href="/faqs">
+            <x-nav-link href="/faqs" :active="request()->is('faqs')">
                 FAQs
             </x-nav-link>
         </li>
@@ -60,17 +60,17 @@
     class="w-full bg-white fixed top-[79px] h-screen z-100 py-12 px-20 md:hidden flex flex-col items-center transform translate-x-full transition-transform duration-300 ease-in-out">
     <ul class="flex flex-col gap-10 items-center">
         <li>
-            <x-nav-link href="/" :active="true">
+            <x-nav-link href="/" :active="request()->is('/')">
                 Home
             </x-nav-link>
         </li>
         <li>
-            <x-nav-link href="/about">
+            <x-nav-link href="/about" :active="request()->is('about')">
                 About
             </x-nav-link>
         </li>
         <li class="relative group">
-            <x-nav-link href="javascript:void(0)">
+            <x-nav-link href="javascript:void(0)" :active="request()->is('event-planning') || request()->is('venue-decoration') || request()->is('rental-services')">
                 Services
             </x-nav-link>
         </li>
@@ -93,7 +93,7 @@
             </div>
         </li>
         <li>
-            <x-nav-link href="/faqs">
+            <x-nav-link href="/faqs" :active="request()->is('faqs')">
                 FAQs
             </x-nav-link>
         </li>

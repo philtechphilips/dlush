@@ -41,12 +41,39 @@
         <!-- Page Content -->
         <main>
             @yield('contents')
+
+
+        <div class="whatsapp-button flex gap-1 items-center rounded-full bg-[#4DC247] fixed right-10 bottom-20 z-1000 cursor-pointer transition-all duration-300 ease-in-out" 
+             onclick="window.open('https://wa.me/447950550220', '_blank')">
+            <img src="{{ asset("/images/whatsapp.svg")}}" alt="WhatsApp">
+            <p class="whatsapp-text font-semibold text-base text-white opacity-0 w-0 overflow-hidden transition-all duration-300 ease-in-out">Chat with us</p>
+        </div>
         </main>
     </div>
 
     @include('layouts.footer')
 
     @yield('scripts')
+
+    <style>
+        .whatsapp-button {
+            width: 3rem;
+            height: 3rem;
+            padding: 0.75rem;
+            justify-content: center;
+        }
+        
+        .whatsapp-button:hover {
+            width: auto;
+            padding-right: 1rem;
+        }
+        
+        .whatsapp-button:hover .whatsapp-text {
+            opacity: 1 !important;
+            width: auto !important;
+            margin-left: 0.5rem;
+        }
+    </style>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -333,10 +360,6 @@
 
         // Initialize with first testimonial
         updateTestimonial(0);
-    </script>
-    
-    <script>
-        
     </script>
 </body>
 

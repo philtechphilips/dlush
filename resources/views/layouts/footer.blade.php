@@ -3,28 +3,28 @@
 
     <ul class="flex w-full flex-wrap md:gap-10 gap-6 items-center justify-center px-5">
         <li>
-            <x-nav-link href="/" :active="true">
+            <x-nav-link href="/" :active="request()->is('/')">
                 Home
             </x-nav-link>
         </li>
         <li>
-            <x-nav-link href="/about">
+            <x-nav-link href="/about" :active="request()->is('about')">
                 About
             </x-nav-link>
         </li>
         <li class="relative group">
-            <x-nav-link href="/event-planning">
+            <x-nav-link href="/event-planning" :active="request()->is('event-planning') || request()->is('venue-decoration') || request()->is('rental-services')">
                 Services
             </x-nav-link>
         </li>
         <li>
-            <x-nav-link href="/faqs">
+            <x-nav-link href="/faqs" :active="request()->is('faqs')">
                 FAQs
             </x-nav-link>
         </li>
 
         <li>
-            <x-nav-link href="/contact-us">
+            <x-nav-link href="/contact-us" :active="request()->is('contact-us')">
                 Contact
             </x-nav-link>
         </li>
