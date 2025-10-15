@@ -7,54 +7,49 @@
 
           <x-faq-accordion :items="[
                     [
-                        'question' => 'How can 69 Agency help our brand grow?',
+                        'question' => 'What types of events do you handle?',
                         'answer' =>
-                            ' We create tailored PR and marketing strategies that help your brand build visibility, connect with your target audience, and drive measurable results. From launching products to sustaining long-term campaigns, we position your brand where it matters.',
+                            'We cover a wide range of events, from intimate gatherings to large celebrations. Our services include event planning & coordination, venue decoration, and rental services tailored to your needs.',
                     ],
                     [
-                        'question' => 'Do you work with start-ups or only established companies?',
+                        'question' => 'How does your pricing work?',
                         'answer' =>
-                            'We work with both. For start-ups, we focus on brand positioning, storytelling, and go-to-market strategies. For established companies, we amplify presence, refresh communication, and create campaigns that strengthen market relevance.',
+                            'We provide custom quotes based on your event requirements. Rates start from £250 and are adjusted depending on the scale and services required.',
                     ],
                     [
-                        'question' => 'Do you offer digital marketing services?',
+                        'question' => 'Do you offer packages or only custom quotes?',
                         'answer' =>
-                            'Yes. Our services include social media strategy, paid ads (LinkedIn, Instagram, X, Google), content creation, community management, and influencer collaborations tailored to your industry.',
+                            'Every event is unique, so we focus on custom quotes. This ensures that you only pay for what you truly need.',
                     ],
                     [
-                        'question' => 'Can you help us with brand identity and storytelling?',
+                        'question' => 'What rental items do you provide?',
                         'answer' =>
-                            'Absolutely. We can refine or create your brand’s voice, messaging, visual identity, and narrative to ensure consistency across campaigns and platforms.',
+                            'We offer chairs, tables, linens, backdrops, dance floors, catering equipment, props, and more. If you need it, we can likely provide it.',
                     ],
                     [
-                        'question' => 'Do you handle event PR and launches?',
+                        'question' => 'Can you work with my chosen venue or vendors?',
                         'answer' =>
-                            'Yes. We manage publicity and promotion for product launches, corporate events, activations, and brand showcases to maximise exposure and audience engagement.',
+                            'Yes. We are flexible and can coordinate seamlessly with your preferred venues and vendors.',
                     ],
                     [
-                        'question' => 'What makes 69 Agency different from other agencies?',
+                        'question' => 'How far in advance should I book your services?',
                         'answer' =>
-                            'We combine creativity with strategy. Beyond just running ads or PR campaigns, we build cultural relevance for brands, making them relatable and memorable to their target audience.',
+                            'We recommend booking as early as possible to secure your date, ideally 3 to 6 months in advance. However, we can sometimes accommodate shorter notice depending on availability.',
                     ],
                     [
-                        'question' => 'Do you work only with music brands or lifestyle/fashion/tech brands too?',
+                        'question' => 'Do you require a deposit?',
                         'answer' =>
                             'Yes. We work with brands in tech, lifestyle, food & beverage, fashion, fintech, communications, hospitality, and more. Our approach adapts to each industry’s needs and target market.',
                     ],
                     [
                         'question' => 'Do you provide influencer marketing?',
                         'answer' =>
-                            'Yes. We connect your brand with the right influencers and thought leaders, ensuring authentic collaborations that drive awareness and conversions.',
+                            'Yes, a deposit is required to confirm your booking, with the balance payable before the event. Full details will be provided in your quote.',
                     ],
                     [
-                        'question' => 'How do you measure ROI for brand partnerships or campaigns?',
+                        'question' => 'Do you travel outside your city?',
                         'answer' =>
-                            'We track KPIs such as reach, engagement, conversions, brand sentiment, press coverage, and ROI depending on the campaign objectives.',
-                    ],
-                    [
-                        'question' => 'Do you help with long-term brand positioning or only one-off campaigns?',
-                        'answer' =>
-                            'Yes. We support one-off campaigns like product launches and also offer ongoing marketing and PR retainers for sustained growth.',
+                            'Yes, we are happy to travel for events. Additional costs may apply depending on location.',
                     ],
                 ]" />
 
@@ -82,7 +77,7 @@
                     accordionItems.forEach(otherItem => {
                         const otherContent = otherItem.querySelector('.accordion-content');
                         const otherIcon = otherItem.querySelector('.accordion-icon');
-                        
+
                         otherItem.classList.remove('active');
                         otherContent.classList.add('hidden');
                         otherIcon.style.transform = 'rotate(0deg)';
@@ -96,7 +91,7 @@
                     } else {
                         item.classList.remove('active');
                         icon.style.transform = 'rotate(0deg)';
-                        
+
                         setTimeout(() => {
                             content.classList.add('hidden');
                         }, 600);

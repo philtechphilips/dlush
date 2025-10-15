@@ -40,12 +40,6 @@
                             <p class="text-gray-200">65 Armorial Road<br>CV3 6GH⁠, Coventry</p>
                         </div>
                     </div>
-
-                    <div class="hidden md:block relative mt-18">
-                        <x-shadow-button href="/contact-us">
-                            Schedule a Call
-                        </x-shadow-button>
-                    </div>
                 </div>
             </div>
 
