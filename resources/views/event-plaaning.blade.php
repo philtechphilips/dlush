@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('title', 'Event Planning & Coordination Services - D\'Lush Events UK')
+@section('description', 'Professional event planning and coordination services in the UK. From consultation to execution, we manage timelines, vendors, and every detail to make your event stress-free and flawless.')
+@section('keywords', 'event planning services UK, event coordination, wedding planning, party planning, event management, event planners Coventry, event coordination services, professional event planning')
+
+@section('og_title', 'Event Planning & Coordination Services - D\'Lush Events UK')
+@section('og_description', 'Professional event planning and coordination services in the UK. From consultation to execution, we manage timelines, vendors, and every detail to make your event stress-free and flawless.')
+@section('og_type', 'service')
+
+@section('twitter_title', 'Event Planning & Coordination Services - D\'Lush Events UK')
+@section('twitter_description', 'Professional event planning and coordination services in the UK. From consultation to execution, we manage timelines, vendors, and every detail to make your event stress-free.')
 
 @section('contents')
     <x-hero-section background-image="/images/planning.webp" overlay-opacity="50" subtitle="Our Services"

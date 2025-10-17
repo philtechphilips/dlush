@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('title', 'Contact D\'Lush Events - Let\'s Bring Your Event to Life')
+@section('description', 'Contact D\'Lush Events for professional event planning services. Located in Coventry, UK. Email: folake02@yahoo.com | Phone: 024 7501 8311 | Address: 65 Armorial Road, CV3 6GH')
+@section('keywords', 'contact D\'Lush Events, event planning contact, wedding planning contact, event services Coventry, event planners contact, event planning consultation, book event services')
+
+@section('og_title', 'Contact D\'Lush Events - Let\'s Bring Your Event to Life')
+@section('og_description', 'Contact D\'Lush Events for professional event planning services. Located in Coventry, UK. Email: folake02@yahoo.com | Phone: 024 7501 8311')
+@section('og_type', 'website')
+
+@section('twitter_title', 'Contact D\'Lush Events - Let\'s Bring Your Event to Life')
+@section('twitter_description', 'Contact D\'Lush Events for professional event planning services. Located in Coventry, UK. Email: folake02@yahoo.com | Phone: 024 7501 8311')
 
 @section('contents')
     <section class="w-full bg-primary-100 pt-40 pb-16 2xl:px-25 md:px-10 px-5">
@@ -64,6 +74,19 @@
                         class="w-full bg-[#E9DDE2] rounded-3xl py-4 px-6 text-gray-200 outline-none border-none"
                         cols="30" rows="10"></textarea>
 
+                    <!-- reCAPTCHA v3 (invisible) -->
+                    @if(config('services.recaptcha.site_key'))
+                    <div class="hidden">
+                        <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response">
+                    </div>
+                    @else
+                    <div class="mt-4 p-4 bg-yellow-100 border border-yellow-400 rounded-lg">
+                        <p class="text-yellow-800 text-sm text-center">
+                            reCAPTCHA is not configured. Please add RECAPTCHA_SITE_KEY to your .env file.
+                        </p>
+                    </div>
+                    @endif
+
                     <!-- Success/Error Messages -->
                     <div id="formMessages" class="hidden mt-4 p-4 rounded-lg">
                         <p id="messageText" class="text-center font-medium"></p>
@@ -100,8 +123,43 @@ document.addEventListener('DOMContentLoaded', function() {
         loadingSpinner.classList.remove('hidden');
         formMessages.classList.add('hidden');
 
-        // Get form data
-        const formData = new FormData(form);
+        // Execute reCAPTCHA v3
+        if (typeof grecaptcha !== 'undefined' && grecaptcha.execute) {
+            grecaptcha.ready(function() {
+                grecaptcha.execute('{{ config("services.recaptcha.site_key") }}', {action: 'contact_form'}).then(function(token) {
+                    console.log('reCAPTCHA token generated:', token);
+                    
+                    // Set the token in the hidden input
+                    document.getElementById('g-recaptcha-response').value = token;
+                    
+                    // Get form data and submit
+                    const formData = new FormData(form);
+                    formData.append('g-recaptcha-response', token);
+                    
+                    submitForm(formData);
+                }).catch(function(error) {
+                    console.error('reCAPTCHA error:', error);
+                    // Show error message
+                    formMessages.classList.remove('hidden');
+                    formMessages.className = 'mt-4 p-4 rounded-lg bg-red-100 border border-red-400';
+                    messageText.textContent = 'reCAPTCHA failed to load. Please refresh and try again.';
+                    messageText.className = 'text-center font-medium text-red-800';
+                    
+                    // Reset button state
+                    submitBtn.disabled = false;
+                    submitText.classList.remove('hidden');
+                    loadingSpinner.classList.add('hidden');
+                });
+            });
+        } else {
+            console.log('reCAPTCHA not available, using fallback');
+            // Fallback if reCAPTCHA is not available
+            const formData = new FormData(form);
+            submitForm(formData);
+        }
+    });
+
+    function submitForm(formData) {
 
         // Send AJAX request
         fetch(form.action, {
@@ -123,6 +181,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // Reset form
                 form.reset();
+                // Clear reCAPTCHA token
+                document.getElementById('g-recaptcha-response').value = '';
             } else {
                 // Show error message
                 formMessages.classList.remove('hidden');
@@ -145,7 +205,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitText.classList.remove('hidden');
             loadingSpinner.classList.add('hidden');
         });
-    });
+    }
 });
 </script>
 @endsection

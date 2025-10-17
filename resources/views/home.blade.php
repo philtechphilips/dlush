@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('title', 'D\'Lush Events - Premium Event Planning & Coordination Services UK')
+@section('description', 'Professional event planning, venue decoration, and rental services in the UK. We craft elegant celebrations with care and attention to detail. Custom quotes from £250. 1000+ guests capacity, 95% client satisfaction.')
+@section('keywords', 'event planning UK, venue decoration, event coordination, wedding planning, party planning, event rentals, table decorations, floral arrangements, event management, Coventry events, UK event services, event planning Coventry, wedding planning UK')
+
+@section('og_title', 'D\'Lush Events - Premium Event Planning & Coordination Services UK')
+@section('og_description', 'Professional event planning, venue decoration, and rental services in the UK. We craft elegant celebrations with care and attention to detail. Custom quotes from £250.')
+@section('og_type', 'website')
+
+@section('twitter_title', 'D\'Lush Events - Premium Event Planning & Coordination Services UK')
+@section('twitter_description', 'Professional event planning, venue decoration, and rental services in the UK. We craft elegant celebrations with care and attention to detail.')
 
 @section('contents')
     <section class="hidden md:flex justify-between w-full relative h-[calc(100vh+340px)] 2xl:h-[calc(100vh+280px)]">
@@ -23,8 +33,8 @@
             <div class="flex gap-6 absolute bottom-10">
                 <div
                     class="bg-primary w-55 h-46 rounded-tl-[48px] rounded-br-[48px] py-12 px-6 flex flex-col justify-center">
-                    <h5 class="text-primary-100 font-bold text-5xl">1000<span class="text-4xl">+</span></h5>
-                    <p class="text-primary-100 text-sm font-medium mt-4">Guests Capacity Per Event</p>
+                    <h5 class="text-primary-100 font-bold text-5xl">100<span class="text-4xl">%</span></h5>
+                    <p class="text-primary-100 text-sm font-medium mt-4">Guest Covered Per Event</p>
                 </div>
                 <div
                     class="bg-primary w-55 h-46 rounded-tl-[48px] rounded-br-[48px] py-12 px-6 flex flex-col justify-center">

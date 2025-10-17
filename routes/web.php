@@ -49,8 +49,59 @@ Route::post('/contact-submit', function () {
         'email' => 'required|email|max:255',
         'phone' => 'required|string|max:20',
         'event_date' => 'nullable|date',
-        'message' => 'required|string|max:1000'
+        'message' => 'required|string|max:1000',
+        'g-recaptcha-response' => 'required'
     ]);
+
+        // Verify reCAPTCHA v3
+        $recaptchaResponse = request('g-recaptcha-response');
+        $secretKey = config('services.recaptcha.secret_key');
+
+        $recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
+        $recaptchaData = [
+            'secret' => $secretKey,
+            'response' => $recaptchaResponse,
+            'remoteip' => request()->ip()
+        ];
+
+        $options = [
+            'http' => [
+                'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+                'method' => 'POST',
+                'content' => http_build_query($recaptchaData)
+            ]
+        ];
+
+        $context = stream_context_create($options);
+        $result = file_get_contents($recaptchaUrl, false, $context);
+        $recaptchaResult = json_decode($result, true);
+
+        if (!$recaptchaResult['success']) {
+            return response()->json([
+                'success' => false,
+                'message' => 'reCAPTCHA verification failed. Please try again.'
+            ], 400);
+        }
+
+
+        // Check reCAPTCHA v3 score (0.0 to 1.0, higher is better)
+        $score = $recaptchaResult['score'] ?? null;
+        $hostname = $recaptchaResult['hostname'] ?? '';
+
+        // If using test keys (testkey.google.com), always pass
+        if ($hostname === 'testkey.google.com') {
+            \Log::info('Using reCAPTCHA test keys - bypassing score check');
+        } else {
+            // For real keys, check the score
+            $minimumScore = 0.3; // Adjust this threshold as needed
+
+            if ($score === null || $score < $minimumScore) {
+                return response()->json([
+                    'success' => false,
+                    'message' => 'reCAPTCHA verification failed. Score: ' . ($score ?? 'null') . ' (minimum: ' . $minimumScore . ')'
+                ], 400);
+            }
+        }
 
     try {
         // Send email notification

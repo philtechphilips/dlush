@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('title', 'About D\'Lush Events - Crafting Events With Care and Elegance')
+@section('description', 'Learn about D\'Lush Events - we exist to make every celebration feel seamless, elegant, and uniquely yours. Based in the UK, we transform ordinary moments into extraordinary memories with professionalism and personal care.')
+@section('keywords', 'about D\'Lush Events, event planning company UK, event coordinators Coventry, wedding planners UK, event management team, professional event services, event planning experience')
+
+@section('og_title', 'About D\'Lush Events - Crafting Events With Care and Elegance')
+@section('og_description', 'Learn about D\'Lush Events - we exist to make every celebration feel seamless, elegant, and uniquely yours. Based in the UK, we transform ordinary moments into extraordinary memories.')
+@section('og_type', 'website')
+
+@section('twitter_title', 'About D\'Lush Events - Crafting Events With Care and Elegance')
+@section('twitter_description', 'Learn about D\'Lush Events - we exist to make every celebration feel seamless, elegant, and uniquely yours. Based in the UK, we transform ordinary moments into extraordinary memories.')
 
 @section('contents')
     <section class="md:flex md:flex-row flex-col justify-end w-full relative">

@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('title', 'Venue Decoration Services - Transform Spaces into Stunning Experiences')
+@section('description', 'Professional venue decoration services in the UK. From floral arrangements and table settings to lighting and backdrops, we create atmospheres that reflect your personality and leave lasting impressions.')
+@section('keywords', 'venue decoration UK, event decoration, wedding decoration, party decoration, floral arrangements, table settings, event styling, venue styling, decoration services Coventry')
+
+@section('og_title', 'Venue Decoration Services - Transform Spaces into Stunning Experiences')
+@section('og_description', 'Professional venue decoration services in the UK. From floral arrangements and table settings to lighting and backdrops, we create atmospheres that reflect your personality.')
+@section('og_type', 'service')
+
+@section('twitter_title', 'Venue Decoration Services - Transform Spaces into Stunning Experiences')
+@section('twitter_description', 'Professional venue decoration services in the UK. From floral arrangements and table settings to lighting and backdrops, we create atmospheres that reflect your personality.')
 
 @section('contents')
     <x-hero-section background-image="/images/planning.webp" overlay-opacity="50" subtitle="Our Services"

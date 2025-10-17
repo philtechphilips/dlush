@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('title', 'Event Rental Services - Quality Rentals for Every Occasion')
+@section('description', 'Professional event rental services in the UK. Chairs, tables, linens, backdrops, dance floors, catering equipment, and props. Reliable delivery and professional setup for your perfect event.')
+@section('keywords', 'event rentals UK, party rentals, wedding rentals, table rentals, chair rentals, event equipment hire, rental services Coventry, event furniture hire, catering equipment hire')
+
+@section('og_title', 'Event Rental Services - Quality Rentals for Every Occasion')
+@section('og_description', 'Professional event rental services in the UK. Chairs, tables, linens, backdrops, dance floors, catering equipment, and props. Reliable delivery and professional setup.')
+@section('og_type', 'service')
+
+@section('twitter_title', 'Event Rental Services - Quality Rentals for Every Occasion')
+@section('twitter_description', 'Professional event rental services in the UK. Chairs, tables, linens, backdrops, dance floors, catering equipment, and props. Reliable delivery and professional setup.')
 
 @section('contents')
     <x-hero-section background-image="/images/planning.webp" overlay-opacity="50" subtitle="Our Services"

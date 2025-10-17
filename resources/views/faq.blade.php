@@ -1,5 +1,15 @@
 @extends('layouts.app')
 
+@section('title', 'Frequently Asked Questions - D\'Lush Events')
+@section('description', 'Find answers to common questions about D\'Lush Events services. Learn about our event planning, venue decoration, and rental services. Custom quotes from £250. Professional event services in the UK.')
+@section('keywords', 'D\'Lush Events FAQ, event planning questions, wedding planning FAQ, event services questions, event planning UK, event coordination FAQ, venue decoration questions')
+
+@section('og_title', 'Frequently Asked Questions - D\'Lush Events')
+@section('og_description', 'Find answers to common questions about D\'Lush Events services. Learn about our event planning, venue decoration, and rental services. Custom quotes from £250.')
+@section('og_type', 'website')
+
+@section('twitter_title', 'Frequently Asked Questions - D\'Lush Events')
+@section('twitter_description', 'Find answers to common questions about D\'Lush Events services. Learn about our event planning, venue decoration, and rental services.')
 
 @section('contents')
     <x-hero-section background-image="/images/planning.webp" overlay-opacity="50" subtitle="FAQ"
